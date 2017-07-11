@@ -80,7 +80,7 @@ print("***Merging Collected Data***")
 df1 = createdf(firstendyear)
 
 
-#Iteration
+#Iteration for merge
 for endyear1 in range(firstendyear+1, lastendyear, 1):
     joiningdata = createdf(endyear1)
     frames = [df1, joiningdata]
@@ -101,5 +101,8 @@ for endyear2 in range(firstendyear, lastendyear, 1):
     os.remove(callcsv(endyear2))
     print(callcsv(endyear2))
     print("Deleted")
+
+#Alerting user to the merged csv name    
+print("\n Merged file saved as " + finalname)
     
 
