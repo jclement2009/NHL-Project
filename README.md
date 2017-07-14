@@ -4,5 +4,5 @@ This repository houses a statistical project involving National Hockey League da
 USING THE FETCHER (NHLDataFetcher.py)
 1. Sign up at https://www.mysportsfeeds.com for a free account.
 2. Execute the fetcher.
-3. Input username and password when prompted to begin pulling and merging the data.
+3. Input your MySportsFeed username and password when prompted to begin pulling and merging the data.  A successful pull is indicated by the HTTP response code 200.  
 4. The merged file is named "NHLOverall Team Standings 2008-2016.csv" and is stored in the same directory as the executable file.
