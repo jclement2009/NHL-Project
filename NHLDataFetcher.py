@@ -16,16 +16,18 @@ import getpass
 #Sportsfeed.com requires a registered username and password to pull the data
 usernameInput = input("Username:\n")
 passwordInput = getpass.getpass("Password:\n")
-directory = os.getcwd() + "/"
 
 
 #Based on season end years, choose the range you want to fetch the data
 firstendyear = 2008
 lastendyear = 2017
 
+
 #Custom function for calling a csv file
 def callcsv(csvname):
-    csvfilename = directory + str(csvname) + ".csv"
+    #csvfilename = directory + str(csvname) + ".csv"
+    csvname1 = "NHL" + str(csvname) + ".csv"
+    csvfilename = os.path.abspath(os.path.join(csvname1))
     return csvfilename
     
 #Custom function that will take csv file name and convert it directly into a dataframe
@@ -68,7 +70,8 @@ for endyear in range(firstendyear, lastendyear, 1):
         #Droping excess column and inserting the end of season year as column
         NHLScores1 = NHLScores.drop(NHLScores.columns[[0]], axis=1)
         NHLScores1.insert(0, '#End Year', endyear)
-        NHLScores1.to_csv(datafile)
+        filename1 = "NHL" + str(endyear) + ".csv"
+        NHLScores1.to_csv(filename1)
 
 #Deleting password
 usernameInput = None
@@ -76,8 +79,9 @@ passwordInput = None
         
 #Need to merge all files in the data range, start with first csv and append all consecutive files
 print(" ")
-print("***Merging Collected Data***")   
-df1 = createdf(firstendyear)
+print("***Merging Collected Data***")  
+firstendyear1 = str(firstendyear)
+df1 = createdf(firstendyear1)
 
 
 #Iteration for merge
