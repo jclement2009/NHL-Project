@@ -6,3 +6,6 @@ USING THE FETCHER (NHLDataFetcher.py)
 2. Execute the fetcher.
 3. Input your MySportsFeed username and password when prompted to begin pulling and merging the data.  A successful pull is indicated by the HTTP response code 200.  
 4. The merged file is named "NHLOverall Team Standings 2008-2016.csv" and is stored in the same directory as the executable file.
+
+Future Plans
+The fetcher currently does not support merges over missing years (for example, if the data from the year 2010 was missing over the 2008-2016 span, the fetcher will not merge the csv files).  This will be resolved in a future update.  
