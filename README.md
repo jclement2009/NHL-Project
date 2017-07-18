@@ -1,6 +1,10 @@
 # NHL-Project
 This repository houses a statistical project involving National Hockey League data.  The file NHLDataFetcher.py fetches aggregate statistics from https://www.mysportsfeeds.com, which span the NHL regular seasons from 2008 to 2016 (Season End Years).  The raw data are in separate CSVs by regular season year and are accessible through the MySportsFeeds web API.  Note that these data are for noncommercial use as part of the MySportsFeeds terms of service for a free account.  
 
+REQUIRED PYTHON PACKAGES
+* requests 
+* pandas 
+
 USING THE FETCHER (NHLDataFetcher.py)
 1. Sign up at https://www.mysportsfeeds.com for a free account.
 2. Execute the fetcher.
@@ -9,4 +13,4 @@ USING THE FETCHER (NHLDataFetcher.py)
 
 FUTURE PLANS
 1. The fetcher currently does not support merges over missing years (for example, if the data from the year 2010 was missing over the 2008-2016 span, the fetcher will not merge the csv files).  This will be resolved in a future update.  
-2. I will implement visualization and descriptive statistics to better represent the collected data. 
+2. I will implement further visualization and descriptive statistics to better represent the collected data.  Consider the following: https://public.tableau.com/profile/joseph.clement6256#!/vizhome/NHLSampleVisualization2/Sheet2?publish=yes 
