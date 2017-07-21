@@ -13,4 +13,4 @@ USING THE FETCHER (NHLDataFetcher.py)
 
 FUTURE PLANS
 1. The fetcher currently does not support merges over missing years (for example, if the data from the year 2010 was missing over the 2008-2016 span, the fetcher will not merge the csv files).  This will be resolved in a future update.  
-2. I will implement further visualization and descriptive statistics to better represent the collected data.  Consider the following: https://public.tableau.com/profile/joseph.clement6256#!/vizhome/NHLTableau1/Dashboard1?publish=yes
+2. I will implement further visualization and descriptive statistics to better represent the collected data.  Consider the following: https://public.tableau.com/profile/joseph.clement6256#!/vizhome/NHLGeographic/Dashboard1?publish=yes
